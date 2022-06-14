@@ -11,7 +11,11 @@ public class FileClass {
 
     public static void main(String[] args) {
 
-
+FileClass f = new FileClass();
+f.Write_data_onFile();
+f.FileExists();
+f.Reading_Data_In_File();
+//f.deletefile();
 
 
 
@@ -70,9 +74,18 @@ File f = new File("example.txt");
 
     }
 
-    public void Write_data_onFile(){
+    public   void Write_data_onFile(){
 
-        //FileWriter mywriter = new FileWriter();
+        try{
+            FileWriter mywriter = new FileWriter("example.txt");
+            mywriter.write("this is an example");
+            mywriter.close();
+        }catch(IOException e){
+            System.out.println("incompleted");
+            e.printStackTrace();
+        }
+
+
 
 
 
