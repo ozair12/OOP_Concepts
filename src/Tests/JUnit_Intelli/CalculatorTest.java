@@ -8,6 +8,8 @@ class CalculatorTest {
 
     @Test
     void add(){
+var cal = new Calculator();
+assertEquals(8,cal.add(5,3));
 
     }
 }
